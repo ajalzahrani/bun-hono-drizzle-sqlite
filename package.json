@@ -1,0 +1,29 @@
+{
+  "name": "bun-hono-drizzle-sqlite",
+  "version": "1.0.0",
+  "module": "server.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "bun run --watch src/server.ts",
+    "db:generate": "bun drizzle-kit generate",
+    "db:migrate": "bun drizzle-kit migrate",
+    "db:push": "bunx drizzle-kit push"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "drizzle-kit": "^0.28.1"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@hono/zod-validator": "^0.4.1",
+    "better-sqlite3": "^11.5.0",
+    "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.36.2",
+    "drizzle-zod": "^0.5.1",
+    "hono": "^4.6.10",
+    "http-errors": "^2.0.0",
+    "zod": "^3.23.8"
+  }
+}
